@@ -16,7 +16,7 @@ let getQuote = () => {
     fetch(url)
         .then((data) => data.json())
         .then((item) => {
-            quote.textContent = '" ' + item.content + ' "';
+            quote.innerHTML = '&ldquo; ' + item.content + ' &rdquo;';
             author.textContent = item.author;
             let mydate = new Date(item.dateAdded);
             // date.innerHTML += "<span>" + mydate.toDateString() + " - " + mydate.toLocaleTimeString().slice(0, 4) + mydate.toLocaleTimeString().slice(7,) + "</span>";
