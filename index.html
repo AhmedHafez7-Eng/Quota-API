@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quota-API</title>
+    <title translate="no">Quota</title>
 
     <!-- Tab Icon -->
     <link rel="shortcut icon" href="https://images.cdn2.stockunlimited.net/preview1300/quote-icon_1627548.jpg" type="image/icon">
@@ -21,9 +21,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>Quote Of The Day</h2>
+    <h2>The Quote Of The Day</h2>
+    <div id="google_translate_element"></div>
     <div class="wrapper">
-        <div class="container">
+        <div class="container" id="container">
             <p id="quote">
                 
             </p>
@@ -34,8 +35,10 @@
             
         </div>
     <button id="btn">New Quote</button>
+    <p id="hint">Note: Please, Refresh the page when you choose "Arabic language" or when you choose another language after Arabic.</p>
 </div>
 
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
   </body>
 </html>

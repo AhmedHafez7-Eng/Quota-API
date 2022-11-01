@@ -5,6 +5,33 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Translate Styles */
+#hint {
+    color: #e5cfee;
+    margin-top: 20px;
+}
+
+.goog-te-banner-frame,
+.goog-te-gadget span {
+    display: none;
+}
+
+.goog-te-gadget {
+    font-size: 0px !important;
+    position: relative;
+    z-index: 3;
+}
+
+.goog-te-gadget select:focus {
+    border: none;
+    outline: none;
+}
+
+.goog-te-gadget select {
+    padding: 7px;
+}
+
+
 body {
     background-color: #802ecc;
     overflow: hidden;
