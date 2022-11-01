@@ -220,4 +220,7 @@ h2 {
     .wrapper {
         width: 350px;
     }
+    h2{
+        display: none;
+    }
 }
