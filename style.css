@@ -6,6 +6,18 @@
 }
 
 /* Translate Styles */
+#google_translate_element {
+    position: absolute;
+    z-index: 100;
+    top: 21%;
+    /* left: 50%;
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px); */
+}
+
 #hint {
     color: #e5cfee;
     margin-top: 20px;

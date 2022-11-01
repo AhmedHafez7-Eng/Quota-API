@@ -44,7 +44,7 @@ function googleTranslateElementInit() {
     myInterval = setInterval(function () {
         if (myInterval) {
             language = htmlEle.lang;
-            console.log(language);
+            // console.log(language);
             if (htmlEle.lang == "ar") {
                 container.style.cssText = "direction: rtl;";
                 tag.style.cssText = "text-align: right;direction: rtl;";
