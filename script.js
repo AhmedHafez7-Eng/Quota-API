@@ -6,6 +6,9 @@ let tag = document.getElementById('tag');
 let btn = document.getElementById('btn');
 const url = "https://api.quotable.io/random?tags=technology|love|happiness&minLength=50&maxLength=100";
 
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 let getQuote = () => {
     tag.innerHTML = "<span>tags: </span>";
