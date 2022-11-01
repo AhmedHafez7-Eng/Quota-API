@@ -10,41 +10,6 @@ body {
     overflow: hidden;
 }
 
-.side1,
-.side2 {
-    position: absolute;
-    z-index: -1;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    color: #FFF;
-    letter-spacing: 2px;
-    font-weight: 600;
-    font-size: 22px;
-    text-align: center;
-    font-style: italic;
-}
-
-.side1 {
-    top: 10%;
-    left: -1.2%;
-}
-
-.side2 {
-    bottom: 9%;
-    right: .7%;
-}
-
-@media(max-width:550px) {
-
-    .side1,
-    .side2 {
-        display: none;
-    }
-}
-
 body::after {
     content: "";
     position: absolute;
@@ -80,7 +45,7 @@ body::before {
 }
 
 .wrapper {
-    width: 400px;
+    width: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -121,22 +86,65 @@ body::before {
     -o-border-radius: 3px;
 }
 
-.container p {
+.container #quote {
     color: #e5cfee;
     line-height: 2;
+    letter-spacing: 2px;
     font-size: 18px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.container h3 {
+.container #author {
     color: #FFF;
-    margin: 20px 0 60px 0;
+    margin: 30px 0 30px 0;
     font-weight: 600;
     text-transform: capitalize;
 }
 
+.container #date {
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: capitalize;
+    text-align: left;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+.container #tag {
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    text-transform: capitalize;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+.container #tag span,
+.container #date span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #e5cfee;
+}
+
+.container #tag span:first-of-type,
+.container #date span:first-of-type {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #FFF;
+}
+
 .container #btn {
+    display: block;
+    margin: 20px auto;
     background-color: #fff;
     border: none;
+    outline: none;
     padding: 15px 45px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -147,4 +155,15 @@ body::before {
     font-size: 18px;
     font-weight: 600;
     color: #cb35f4;
+}
+
+.container #btn:focus {
+    border: none;
+    outline: none;
+}
+
+@media(max-width: 480px) {
+    .wrapper {
+        width: 350px;
+    }
 }
