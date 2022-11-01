@@ -219,6 +219,7 @@ h2 {
 @media(max-width: 480px) {
     .wrapper {
         width: 350px;
+        margin-top: 30px;
     }
     h2{
         display: none;
