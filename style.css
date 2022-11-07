@@ -43,7 +43,7 @@ body {
 .quote-area .quote {
     font-size: 22px;
     text-align: center;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .quote-area i {
@@ -60,12 +60,31 @@ body {
     align-items: flex-end;
 }
 
-.content .author {
+.content .author,
+.content .date {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
     font-size: 18px;
     font-style: italic;
+}
+
+.content .date {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.content #tag {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content #tag span {
+    margin: 0 0 0 7px;
+    color: #1f7eea;
+    text-decoration: underline;
 }
 
 .content .author span:first-child {
@@ -142,4 +161,9 @@ body {
     background: #FFF;
     border-color: #4419b0;
     font-weight: 600;
+}
+
+.features button#newQuote.loading {
+    opacity: .7;
+    pointer-events: none;
 }
