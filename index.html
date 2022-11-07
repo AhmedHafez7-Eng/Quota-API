@@ -7,7 +7,11 @@
     <title translate="no">Quota</title>
 
     <!-- Tab Icon -->
-    <link rel="shortcut icon" href="https://images.cdn2.stockunlimited.net/preview1300/quote-icon_1627548.jpg" type="image/icon">
+    <link
+      rel="shortcut icon"
+      href="https://images.cdn2.stockunlimited.net/preview1300/quote-icon_1627548.jpg"
+      type="image/icon"
+    />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,26 +23,24 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- FontAwesome CDN Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h2>The Quote Of The Day</h2>
-    <div id="google_translate_element"></div>
-    <div class="wrapper">
-        <div class="container" id="container">
-            <p id="quote">
-                
-            </p>
-            <h3 id="author"></h3>
-            <!-- <button id="btn">Get Quote</button> -->
-            <p id="tag"></p>
-            <p id="date"></p>
-            
-        </div>
-    <button id="btn">New Quote</button>
-    <p id="hint">Note: Please, Refresh the page when you choose "Arabic language" or when you choose another language after Arabic.</p>
-</div>
+    <section class="wrapper">
+      <header>Quote of the day</header>
+      <div class="content">
+        <div class="quote-area"></div>
+      </div>
+    </section>
 
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
   </body>
 </html>
