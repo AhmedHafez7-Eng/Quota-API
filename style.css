@@ -163,7 +163,8 @@ body {
     font-weight: 600;
 }
 
-.features button#newQuote.loading {
+.features button#newQuote.loading,
+.sound.loading {
     opacity: .7;
     pointer-events: none;
 }

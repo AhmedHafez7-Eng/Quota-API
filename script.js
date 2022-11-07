@@ -1,8 +1,12 @@
-const quoteText = document.querySelector(".quote");
-const authorName = document.querySelector(".author .name");
-const dateAdded = document.querySelector(".date .dateAdded");
-const quoteBtn = document.querySelector("#newQuote");
-let tag = document.getElementById('tag');
+const quoteText = document.querySelector(".quote"),
+    authorName = document.querySelector(".author .name"),
+    dateAdded = document.querySelector(".date .dateAdded"),
+    quoteBtn = document.querySelector("#newQuote"),
+    tag = document.getElementById('tag'),
+    // translateBtn = document.querySelector(".translate"),
+    soundBtn = document.querySelector(".sound"),
+    copyBtn = document.querySelector(".copy"),
+    twitterBtn = document.querySelector(".twitter");
 
 
 
@@ -31,5 +35,13 @@ function randomQuote() {
             quoteBtn.classList.remove("loading");
         });
 }
+
+soundBtn.addEventListener("click", () => {
+    // SpeechSynthesisUtterance is a web speech api that represents a speech request
+    let msg = new SpeechSynthesisUtterance(`${quoteText.innerText}. Author: ${authorName.innerText}`);
+    speechSynthesis.speak(msg); // Speak mehtod of speechSynthesis that speak the msg
+});
+
+
 window.addEventListener("load", randomQuote);
 quoteBtn.addEventListener("click", randomQuote);
