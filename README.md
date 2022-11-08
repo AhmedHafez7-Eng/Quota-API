@@ -1,7 +1,11 @@
-<center><img src="https://images.cdn2.stockunlimited.net/preview1300/quote-icon_1627548.jpg" width="350" height="350"></center>
+<p align="center">
+  <img src="https://images.cdn2.stockunlimited.net/preview1300/quote-icon_1627548.jpg" width="350" height="350">
+</p>
 
 # Quota-API
 ## Random Quotes JavaScript App with Awesome Features.
+### For Live Demo of Latest Version(v2), Visit: <a href="https://az-quota.netlify.app/">Quota App</a>
+### For Old Version (v1) of Quota, <a href="https://github.com/AhmedHafez7-Eng/Quota-API/tree/version1">Click Here!</a>
 
 - ### Features:
   - Voice Reading: It allows you to listen to the quote with random voice type.
