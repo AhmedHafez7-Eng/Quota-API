@@ -6,7 +6,8 @@ const quoteText = document.querySelector(".quote"),
     // translateBtn = document.querySelector(".translate"),
     soundBtn = document.querySelector(".sound"),
     copyBtn = document.querySelector(".copy"),
-    twitterBtn = document.querySelector(".twitter");
+    twitterBtn = document.querySelector(".twitter"),
+    facebookBtn = document.querySelector(".facebook");
 
 
 
@@ -84,20 +85,22 @@ twitterBtn.addEventListener("click", () => {
 });
 
 
-
-
-// FB.ui(
-//     {
-//       method: 'feed',
-//       name: 'This is the content of the "name" field.',
-//       link: 'URL which you would like to share ',
-//       picture: ‘URL of the image which is going to appear as thumbnail image in share dialogbox’,
-//       caption: 'Caption like which appear as title of the dialog box',
-//       description: 'Small description of the post',
-//       message: ''
-//     }
-//   );
-
-
 window.addEventListener("load", randomQuote);
 quoteBtn.addEventListener("click", randomQuote);
+
+
+// =================================================== Notes for coming updates =================================
+
+
+// Facebook Feature Implementation
+// facebookBtn.addEventListener("click", () => {
+//     FB.ui(
+//         {
+//             method: 'feed',
+//             caption: 'Caption like which appear as title of the dialog box',
+//             description: 'Small description of the post',
+//             message: 'Hello World!'
+//         }
+//     );
+//     // window.open(twitterUrl, '_blank'); // open a new twitter window with passing quote in the url
+// });
