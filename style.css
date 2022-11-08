@@ -197,6 +197,7 @@ body {
     font-weight: 600;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .content #tag span {
