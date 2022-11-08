@@ -13,6 +13,30 @@ body {
     background: #6032d5;
 }
 
+#alert {
+    max-width: 250px;
+    word-break: break-word;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    background: #FFF;
+    padding: 10px 20px;
+    margin: 20px 0 10px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    color: #6032d5;
+    font-weight: 600;
+    transition: display .3s ease;
+    -webkit-transition: display .3s ease;
+    -moz-transition: display .3s ease;
+    -ms-transition: display .3s ease;
+    -o-transition: display .3s ease;
+}
+
 .wrapper {
     width: 605px;
     background: #FFF;

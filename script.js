@@ -36,7 +36,15 @@ function randomQuote() {
         });
 }
 
+// Sound Feature Implementation
 soundBtn.addEventListener("click", () => {
+
+    document.getElementById("alert").innerText = "Speaking...";
+    document.getElementById("alert").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("alert").innerText = "";
+        document.getElementById("alert").style.display = "none";
+    }, 2500);
 
     // SpeechSynthesisUtterance is a web speech api that represents a speech request
     let msg = new SpeechSynthesisUtterance(`${quoteText.innerText}. Author: ${authorName.innerText}`);
@@ -54,6 +62,19 @@ soundBtn.addEventListener("click", () => {
             soundBtn.classList.remove("loading");
         }
     });
+});
+
+// Copy Feature Implementation
+copyBtn.addEventListener("click", () => {
+    document.getElementById("alert").innerText = "Copied to clipboard!";
+    document.getElementById("alert").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("alert").innerText = "";
+        document.getElementById("alert").style.display = "none";
+    }, 2500);
+    // Copy the quote's text to clipboard
+    // writeText() property writes the specified text string to the system clipboard
+    navigator.clipboard.writeText(quoteText.innerText);
 });
 
 
