@@ -14,7 +14,7 @@ const url = "https://api.quotable.io/random?tags=technology|love|happiness|histo
 
 function randomQuote() {
 
-    // tag.innerHTML = "Tags:&ThickSpace;";
+    tag.innerHTML = "";
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
 
