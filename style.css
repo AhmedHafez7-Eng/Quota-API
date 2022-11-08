@@ -37,6 +37,64 @@ body {
     -o-transition: display .3s ease;
 }
 
+/* Translate Styles */
+.goog-te-banner-frame,
+.goog-te-gadget span,
+#goog-gt-tt {
+    display: none !important;
+}
+
+.translate {
+    position: relative;
+}
+
+.goog-te-gadget-simple .fa-language {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    /* border-left: 1px solid #d5d5d5;
+    border-top: 1px solid #9b9b9b;
+    border-bottom: 1px solid #e8e8e8;
+    border-right: 1px solid #d5d5d5; */
+    border: none !important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.goog-te-gadget-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.goog-te-gadget {
+    font-size: 0px !important;
+    position: relative;
+    z-index: 3;
+    background: transparent !important;
+    /* display: none; */
+}
+
+.goog-te-gadget select:focus {
+    border: none;
+    outline: none;
+}
+
+.goog-te-gadget select {
+    padding: 7px;
+}
+
 .wrapper {
     width: 605px;
     background: #FFF;
@@ -144,7 +202,7 @@ body {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border: 2px solid #6032d5;
+    border: 2px solid #6032d5 !important;
     color: #6032d5;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
@@ -157,7 +215,7 @@ body {
 .features ul li:hover {
     color: #FFF;
     border-color: transparent;
-    background: #6032d5;
+    background: #6032d5 !important;
 }
 
 .features button#newQuote {

@@ -7,9 +7,8 @@ const quoteText = document.querySelector(".quote"),
     soundBtn = document.querySelector(".sound"),
     copyBtn = document.querySelector(".copy"),
     twitterBtn = document.querySelector(".twitter"),
-    facebookBtn = document.querySelector(".facebook");
-
-
+    translateBtn = document.querySelector(".translate"),
+    htmlEle = document.getElementById("google_translate_element");
 
 const url = "https://api.quotable.io/random?tags=technology|love|happiness|history|science&minLength=50&maxLength=100";
 
@@ -37,7 +36,7 @@ function randomQuote() {
         });
 }
 
-// Sound Feature Implementation
+//======= Sound Feature Implementation ===============================
 soundBtn.addEventListener("click", () => {
 
     document.getElementById("alert").innerText = "Speaking...";
@@ -48,7 +47,7 @@ soundBtn.addEventListener("click", () => {
     }, 2500);
 
     // SpeechSynthesisUtterance is a web speech api that represents a speech request
-    let msg = new SpeechSynthesisUtterance(`${quoteText.innerText}. Author: ${authorName.innerText}`);
+    let msg = new SpeechSynthesisUtterance(`${quoteText.innerText}. ${authorName.innerText}`);
     soundBtn.classList.add("loading");
     speechSynthesis.speak(msg); // Speak mehtod of speechSynthesis that speak the msg
 
@@ -65,7 +64,7 @@ soundBtn.addEventListener("click", () => {
     });
 });
 
-// Copy Feature Implementation
+//====== Copy Feature Implementation ==================================
 copyBtn.addEventListener("click", () => {
     document.getElementById("alert").innerText = "Copied to clipboard!";
     document.getElementById("alert").style.display = "block";
@@ -78,15 +77,41 @@ copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(quoteText.innerText);
 });
 
-// Twitter Feature Implementation
+//======== Twitter Feature Implementation =================================
 twitterBtn.addEventListener("click", () => {
     let twitterUrl = `https://twitter.com/intent/tweet?url=${quoteText.innerText},${authorName.innerText}`;
     window.open(twitterUrl, '_blank'); // open a new twitter window with passing quote in the url
 });
 
 
+// ======= Translations Implementation ===================================
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+}
+
 window.addEventListener("load", randomQuote);
 quoteBtn.addEventListener("click", randomQuote);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // =================================================== Notes for coming updates =================================
@@ -104,3 +129,23 @@ quoteBtn.addEventListener("click", randomQuote);
 //     );
 //     // window.open(twitterUrl, '_blank'); // open a new twitter window with passing quote in the url
 // });
+
+
+
+
+// (function () {
+//     // if (htmlEle.getAttribute("lang") === 'ar') {
+//     //     container.style.cssText = "direction: rtl;";
+//     //     tag.style.cssText = "text-align: right;";
+//     //     date.style.cssText = "text-align: right;";
+//     // }
+
+// })();
+
+// myTimeout = setTimeout(function () {
+//     language = htmlEle.lang;
+// }, 100);
+
+// setInterval(function () {
+//     language = htmlEle.lang;
+// }, 1000);
