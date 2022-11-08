@@ -37,9 +37,23 @@ function randomQuote() {
 }
 
 soundBtn.addEventListener("click", () => {
+
     // SpeechSynthesisUtterance is a web speech api that represents a speech request
     let msg = new SpeechSynthesisUtterance(`${quoteText.innerText}. Author: ${authorName.innerText}`);
+    soundBtn.classList.add("loading");
     speechSynthesis.speak(msg); // Speak mehtod of speechSynthesis that speak the msg
+
+    msg.addEventListener('end', (evt) => {
+        const { charIndex, utterance } = evt;
+
+        if (charIndex + 1 === utterance.text.length) {
+            // End fired when utterance finished
+            console.log("Text not Finished");
+        } else {
+            // console.log("Text is Finished");
+            soundBtn.classList.remove("loading");
+        }
+    });
 });
 
 
