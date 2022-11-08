@@ -77,6 +77,27 @@ copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(quoteText.innerText);
 });
 
+// Twitter Feature Implementation
+twitterBtn.addEventListener("click", () => {
+    let twitterUrl = `https://twitter.com/intent/tweet?url=${quoteText.innerText},${authorName.innerText}`;
+    window.open(twitterUrl, '_blank'); // open a new twitter window with passing quote in the url
+});
+
+
+
+
+// FB.ui(
+//     {
+//       method: 'feed',
+//       name: 'This is the content of the "name" field.',
+//       link: 'URL which you would like to share ',
+//       picture: ‘URL of the image which is going to appear as thumbnail image in share dialogbox’,
+//       caption: 'Caption like which appear as title of the dialog box',
+//       description: 'Small description of the post',
+//       message: ''
+//     }
+//   );
+
 
 window.addEventListener("load", randomQuote);
 quoteBtn.addEventListener("click", randomQuote);
