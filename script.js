@@ -47,7 +47,7 @@ soundBtn.addEventListener("click", () => {
     }, 2500);
 
     // SpeechSynthesisUtterance is a web speech api that represents a speech request
-    let msg = new SpeechSynthesisUtterance(`${quoteText.innerText}. ${authorName.innerText}`);
+    let msg = new SpeechSynthesisUtterance(`${quoteText.innerText}`);
     soundBtn.classList.add("loading");
     speechSynthesis.speak(msg); // Speak mehtod of speechSynthesis that speak the msg
 
