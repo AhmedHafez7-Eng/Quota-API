@@ -14,7 +14,7 @@ const url = "https://api.quotable.io/random?tags=technology|love|happiness|histo
 
 function randomQuote() {
 
-    tag.innerHTML = "Tags:&ThickSpace;";
+    // tag.innerHTML = "Tags:&ThickSpace;";
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
 
@@ -87,7 +87,7 @@ twitterBtn.addEventListener("click", () => {
 // ======= Translations Implementation ===================================
 
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
 }
 
 window.addEventListener("load", randomQuote);
