@@ -15,6 +15,16 @@ body {
     overflow: hidden !important;
 }
 
+.hint {
+    margin-top: 25px;
+    font-size: 12px;
+    color: rgb(188, 26, 237);
+    font-weight: 600;
+    text-align: center;
+    border-top: thin solid #CCC;
+    padding: 10px 0 0;
+}
+
 #alert {
     max-width: 250px;
     word-break: break-word;
