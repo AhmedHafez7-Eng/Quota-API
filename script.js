@@ -1,3 +1,17 @@
+// =============== Page Loader ===============
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("stop-scrolling");
+    setTimeout(() => {
+        const pageLoaderContainer = document.querySelector(".pageLoader-container");
+        pageLoaderContainer.classList.add("closeLoader");
+        document.body.classList.remove("stop-scrolling");
+    }, 3000);
+});
+
+
+
+
+
 const quoteText = document.querySelector(".quote"),
     authorName = document.querySelector(".author .name"),
     dateAdded = document.querySelector(".date .dateAdded"),
