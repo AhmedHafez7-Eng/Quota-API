@@ -23,6 +23,8 @@
 
 - ### Coming Features:
   - Capture quote as an Image snippet.
+  - Color System Picker.
+  - Dark / Light Mode.
   - Facebook post or story sharing.
   - WhatsApp story sharing.
   - Share your thoughts with me to make it more valuable.
