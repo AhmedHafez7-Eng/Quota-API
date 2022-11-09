@@ -336,12 +336,12 @@ body {
     text-decoration: none;
     display: inline-block;
     margin: 0 10px;
-    outline: 1px solid #3f2879;
+    /* outline: 1px solid #3f2879; */
     perspective: 200px;
 }
 
 .socialBtns .box {
-    --box-size: 40px;
+    --box-size: 50px;
     display: block;
     width: var(--box-size);
     height: var(--box-size);
@@ -377,7 +377,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: .5;
+    /* opacity: .5; */
 }
 
 .socialBtns .top {
@@ -398,7 +398,7 @@ body {
     -moz-transform: translateY(50%) rotateX(-90deg);
     -ms-transform: translateY(50%) rotateX(-90deg);
     -o-transform: translateY(50%) rotateX(-90deg);
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 /* Responsive */
