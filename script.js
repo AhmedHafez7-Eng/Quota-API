@@ -114,7 +114,12 @@ function takeshot() {
     // to the output div
     html2canvas(capturedDiv).then(
         function (canvas) {
-            document.getElementById('outputImage').appendChild(canvas);
+
+            var canvas_data = canvas.toDataURL();
+            var img_element = document.createElement("img")
+            img_element.src = canvas_data;
+
+            document.getElementById('outputImage').appendChild(img_element);
             document.getElementById('outputImgContainer').style.display = "flex";
             document.body.classList.add("stop-scrolling");
         });
