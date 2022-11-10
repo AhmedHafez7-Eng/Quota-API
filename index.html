@@ -38,23 +38,29 @@
       <div class="pageLoader"></div>
       <div id="pageLoader-text">Quota App</div>
     </div>
+    <div id="outputImgContainer">
+      <p id="closeCaptureImg">&times;</p>
+      <div id="outputImage"></div>
+    </div>
     <div id="alert"></div>
     <section class="wrapper">
       <header>Quote of the day</header>
-      <div class="content">
-        <div class="quote-area">
-          <i class="fa-solid fa-quote-left"></i>
-          <p class="quote"></p>
-          <i class="fa-solid fa-quote-right"></i>
+      <div id="photo">
+        <div class="content">
+          <div class="quote-area">
+            <i class="fa-solid fa-quote-left" data-html2canvas-ignore></i>
+            <p class="quote"></p>
+            <i class="fa-solid fa-quote-right" data-html2canvas-ignore></i>
+          </div>
+          <div class="author" translate="no">
+            <span>__</span>
+            <span class="name"></span>
+          </div>
+          <div class="date">
+            <span class="dateAdded"></span>
+          </div>
+          <div id="tag"></div>
         </div>
-        <div class="author" translate="no">
-          <span>__</span>
-          <span class="name"></span>
-        </div>
-        <div class="date">
-          <span class="dateAdded"></span>
-        </div>
-        <div id="tag"></div>
       </div>
       <div class="buttons">
         <div class="features">
@@ -67,6 +73,9 @@
               id="google_translate_element"
             >
               <i class="fa-solid fa-language"></i>
+            </li>
+            <li class="capture" id="capture">
+              <i class="fa-solid fa-camera-alt"></i>
             </li>
             <!-- <li class="facebook">
               <i class="fa-brands fa-facebook-square"></i>
@@ -127,6 +136,8 @@
       </a>
     </div>
 
+    <!-- Include from the CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
     <script
       type="text/javascript"
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"

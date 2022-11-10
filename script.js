@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
 });
 
-
-
-
-
 const quoteText = document.querySelector(".quote"),
     authorName = document.querySelector(".author .name"),
     dateAdded = document.querySelector(".date .dateAdded"),
@@ -103,6 +99,34 @@ twitterBtn.addEventListener("click", () => {
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
 }
+
+
+// ======== ScreenShot Capture Implementation =================================
+
+// Define the function 
+// to screenshot the div
+function takeshot() {
+    let capturedDiv = document.getElementById('photo');
+    document.getElementById('outputImage').innerHTML = "";
+    // Use the html2canvas
+    // function to take a screenshot
+    // and append it
+    // to the output div
+    html2canvas(capturedDiv).then(
+        function (canvas) {
+            document.getElementById('outputImage').appendChild(canvas);
+            document.getElementById('outputImgContainer').style.display = "flex";
+            document.body.classList.add("stop-scrolling");
+        });
+}
+
+document.getElementById("capture").addEventListener("click", takeshot);
+
+document.getElementById("closeCaptureImg").addEventListener("click", () => {
+    document.getElementById('outputImgContainer').style.display = "none";
+    document.body.classList.remove("stop-scrolling");
+});
+
 
 window.addEventListener("load", randomQuote);
 quoteBtn.addEventListener("click", randomQuote);
