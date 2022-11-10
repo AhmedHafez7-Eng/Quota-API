@@ -8,6 +8,7 @@
 ### For Old Version (v1) of Quota, <a href="https://github.com/AhmedHafez7-Eng/Quota-API/tree/version1">Click Here!</a>
 
 - ### Features:
+  - Quote Capture: Capture your preferable quote to an Image & Save it into your device.
   - Voice Reading: It allows you to listen to the quote with random voice type.
   - Copy to Clipboard: It gets a copy of the code and save it to the system clipboard.
   - Twitter Sharing: Share your quote and create a new tweet for publishing.
